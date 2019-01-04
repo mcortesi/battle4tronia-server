@@ -1,0 +1,73 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: battlefortronia-service
+spec:
+  selector:
+    app: battlefortronia
+  type: NodePort
+  sessionAffinity: ClientIP
+  ports:
+    - name: http
+      port: 80
+      targetPort: 8000
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: battlefortronia-deployment
+  labels:
+    app: battlefortronia
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: battlefortronia
+  template:
+    metadata:
+      labels:
+        app: battlefortronia
+    spec:
+      containers:
+        - name: battlefortronia
+          image: gcr.io/easytrade-00001/battlefortronia
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 8000
+          env:
+            - name: SERVICES
+              value: 'tron-watcher webapp'
+            - name: NODE_ENV
+              value: 'production'
+            - name: POSTGRESQL_HOST
+              value: 'postgres'
+            - name: POSTGRESQL_DATABASE_NAME
+              value: 'battlefortronia'
+            - name: POSTGRESQL_USER
+              valueFrom:
+                secretKeyRef:
+                  name: cloudsql-db-credentials
+                  key: username
+            - name: POSTGRESQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: cloudsql-db-credentials
+                  key: password
+            - name: FULLNODE_URI
+              value: 'https://api.trongrid.io'
+              # value: 'http://fullnode:8090'
+            - name: SOLIDITYNODE_URI
+              value: 'https://api.trongrid.io'
+              # value: 'http://soliditynode:8091'
+            - name: BATTLEFORTRONIA_ADDR
+              value: 'TUVZkrputmvvmWiptHzEmsF5oDrTs5oLQM'
+            - name: DEALER_ADDRESS
+              valueFrom:
+                secretKeyRef:
+                  name: battlefortronia-dealer
+                  key: address
+            - name: DEALEAR_PK
+              valueFrom:
+                secretKeyRef:
+                  name: battlefortronia-dealer
+                  key: pk

@@ -1,0 +1,13 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: battlefortronia-ingress
+  annotations:
+    kubernetes.io/ingress.global-static-ip-name: 'battlefortronia-api'
+    kubernetes.io/ingress.allow-http: false
+spec:
+  tls:
+    - secretName: battlefortronia-tls-secret
+  backend:
+    serviceName: battlefortronia-service
+    servicePort: 80

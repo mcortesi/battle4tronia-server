@@ -1,0 +1,9 @@
+bin/
+deploy/
+dist/
+doc/
+examples/
+deployment/
+node_modules/
+resources/
+src/scripts/deploy-contracts.ts

@@ -1,0 +1,588 @@
+[
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tronium",
+				"type": "uint256"
+			},
+			{
+				"name": "newPublicKey",
+				"type": "address"
+			},
+			{
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"name": "s",
+				"type": "bytes32"
+			}
+		],
+		"name": "closeAndOpenChannel",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "publicKey",
+				"type": "address"
+			}
+		],
+		"name": "openChannel",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "CLOSE_ID",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "amount",
+				"type": "uint256"
+			}
+		],
+		"name": "withdraw",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "CLOSE_AND_OPEN_ID",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint8"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "playerAddress",
+				"type": "address"
+			},
+			{
+				"name": "uints",
+				"type": "uint256[11]"
+			},
+			{
+				"name": "signaturesV",
+				"type": "uint8[5]"
+			},
+			{
+				"name": "signaturesR",
+				"type": "bytes32[5]"
+			},
+			{
+				"name": "signaturesS",
+				"type": "bytes32[5]"
+			}
+		],
+		"name": "dispute",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "troniumPrice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "disputePeriod",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "renounceOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "tronium",
+				"type": "uint256"
+			},
+			{
+				"name": "v",
+				"type": "uint8"
+			},
+			{
+				"name": "r",
+				"type": "bytes32"
+			},
+			{
+				"name": "s",
+				"type": "bytes32"
+			}
+		],
+		"name": "closeChannel",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "channels",
+		"outputs": [
+			{
+				"name": "opened",
+				"type": "bool"
+			},
+			{
+				"name": "channelId",
+				"type": "uint256"
+			},
+			{
+				"name": "currentRound",
+				"type": "uint256"
+			},
+			{
+				"name": "tronium",
+				"type": "uint256"
+			},
+			{
+				"name": "publicKey",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "owner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "isOwner",
+		"outputs": [
+			{
+				"name": "",
+				"type": "bool"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_troniumPrice",
+				"type": "uint256"
+			}
+		],
+		"name": "setTroniumPrice",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "getTroniumPrice",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "addr",
+				"type": "address"
+			}
+		],
+		"name": "getChannel",
+		"outputs": [
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "uint256"
+			},
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"name": "disputes",
+		"outputs": [
+			{
+				"name": "opened",
+				"type": "bool"
+			},
+			{
+				"name": "round",
+				"type": "uint256"
+			},
+			{
+				"name": "withDrawBlock",
+				"type": "uint256"
+			},
+			{
+				"name": "tronium",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "moveArray",
+				"type": "uint256[2][]"
+			}
+		],
+		"name": "setProbabilities",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "deposit",
+		"outputs": [],
+		"payable": true,
+		"stateMutability": "payable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "delear",
+		"outputs": [
+			{
+				"name": "",
+				"type": "address"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [],
+		"name": "withdrawFromDispute",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "transferOwnership",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_disputePeriod",
+				"type": "uint256"
+			}
+		],
+		"name": "setDdsputePeriod",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"constant": true,
+		"inputs": [],
+		"name": "VERSION",
+		"outputs": [
+			{
+				"name": "",
+				"type": "string"
+			}
+		],
+		"payable": false,
+		"stateMutability": "view",
+		"type": "function"
+	},
+	{
+		"constant": false,
+		"inputs": [
+			{
+				"name": "_delear",
+				"type": "address"
+			}
+		],
+		"name": "setDelear",
+		"outputs": [],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "function"
+	},
+	{
+		"inputs": [
+			{
+				"name": "_delear",
+				"type": "address"
+			},
+			{
+				"name": "_troniumPrice",
+				"type": "uint256"
+			},
+			{
+				"name": "_disputePeriod",
+				"type": "uint256"
+			}
+		],
+		"payable": false,
+		"stateMutability": "nonpayable",
+		"type": "constructor"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "playerAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "channelId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "tronium",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "publicKey",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "collectables",
+				"type": "address[]"
+			}
+		],
+		"name": "ChannelOpened",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "playerAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "channelId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "tronium",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "publicKey",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "collectables",
+				"type": "address[]"
+			}
+		],
+		"name": "ChannelCloseAndOpened",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "playerAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "channelId",
+				"type": "uint256"
+			}
+		],
+		"name": "ChannelClosed",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": false,
+				"name": "playerAddress",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "channelId",
+				"type": "uint256"
+			},
+			{
+				"indexed": false,
+				"name": "publicKey",
+				"type": "address"
+			},
+			{
+				"indexed": false,
+				"name": "uints",
+				"type": "uint256[11]"
+			}
+		],
+		"name": "DisputeSet",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "previousOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipRenounced",
+		"type": "event"
+	},
+	{
+		"anonymous": false,
+		"inputs": [
+			{
+				"indexed": true,
+				"name": "previousOwner",
+				"type": "address"
+			},
+			{
+				"indexed": true,
+				"name": "newOwner",
+				"type": "address"
+			}
+		],
+		"name": "OwnershipTransferred",
+		"type": "event"
+	}
+]

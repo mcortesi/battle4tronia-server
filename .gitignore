@@ -1,0 +1,15 @@
+# VIM
+*.swp
+*.swo
+*.key
+
+node_modules/
+dist/
+lib/
+deploy/**/output-directory
+deploy/**/logs
+deploy/tokens.json
+deploy/accounts.json
+deploy/devcontracts.json
+.vscode
+examples
